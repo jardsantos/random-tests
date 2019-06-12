@@ -25,10 +25,10 @@ def ensemble_features(X_train, y_train, X_test, ratio, proba=0, random_state=Non
         X_train_, X_test_, y_train_, y_train_ensemble = X_train, X_train, y_train, y_train
     else:
         X_train_, X_test_, y_train_, y_train_ensemble = train_test_split(X_train,
-                                                                        y_train,
-                                                                        test_size=ratio,
-                                                                        stratify=y_train,
-                                                                        random_state=random_state)
+                                                                         y_train,
+                                                                         test_size=ratio,
+                                                                         stratify=y_train,
+                                                                         random_state=random_state)
 
     X_train_ensemble = np.zeros((X_test_.shape[0],n_models))
     X_test_ensemble = np.zeros((X_test.shape[0], n_models))
